@@ -1,0 +1,52 @@
+Parcial Exam Spring 2020 - Miquel Florensa
+
+|= ∧ ∨ ¬ ≡
+
+
+QUESTION 1. Is -(F & -F) v G a tautology? satisfiable? unsatisfiable?
+
+It is a Tautology. Proof:
+
+It will be a tautology iff for all I, I |= -(F & -F) v G
+
+	I |= -(F & -F) v G implies											by def of satisfaction, that 
+	evalI(-(F & -F) v G) = 1 which implies								by def of evaluation of v, that
+	max(evalI(-(F & -F)), evalI(G)) = 1 which implies					by def of evaluation of -, that
+	max(1 - evalI(F & -F), evalI(G)) = 1 which implies					by def of evaluation of &, that
+	max(1 - min(evalI(F), evalI(-F)), evalI(G)) = 1 which implies		by def of evaluation of -, that
+	max(1 - min(evalI(F), 1 - evalI(F)), evalI(G)) = 1 which implies	by def of evaluation, that
+	max(1 - 0, evalI(G)) = 1 which implies								by arithmetic, that
+	max(1, evalI(G)) = 1 iff											by def of evaluation and arithmetic, that
+	1 = 1
+	
+
+
+TSEITIN
+(p & -q v r & p) & -(r v p)
+
+a0 <-> a1 & -a4		Clause set S = { (-a0 v a1), (-a0 v -a4), (-a1 v a4 v a0), a0
+a1 <-> a2 v a3						  -a1 v a2 v a3, -a3 v a1, -a2 v a1
+a2 <-> p & -q
+a3 <-> r & p
+a4 <-> r v p
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

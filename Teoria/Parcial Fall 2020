@@ -1,0 +1,49 @@
+Parcial Exam Fall 2020 - Miquel Florensa
+
+|= ∧ ∨ ¬ ≡
+
+1)
+
+from two cluses C1 and C2, by resolution we can obtain a clause D
+then C1 ∧ C2 |= D
+
+If we can obtain D by resolution from C1 ∧ C2 then C1 must be of the form C'1 V p and C2 must be of the form C'2 V p for some p
+and D is C'1 V C'2
+
+(p V C'1) ∧ (¬p V C'2) |= C'1 V C'2
+
+For all I, if I |= (p V C'1) ∧ (¬p V C'2) then I |= C'1 V C'2
+
+Assume I |= (p V C'1) ∧ (¬p V C'2)
+
+Case A) I(p) = 1
+	I |= (p V C'1) ∧ (¬p V C'2) implies,						by def of satisfaction, that
+	evalI ((p V C'1) ∧ (¬p V C'2)) = 1, which implies,			by def of evaluation of ∧, that
+	min(evalI(p V C'1), evalI(¬p V C'2)) = 1 which implies,		by def of min, that
+	evalI(¬p V C'2) = 1 which implies,							by def of evaluation of V, that
+	max(evalI(¬p), evalI(C'2)) = 1 which implies,				by def of evaluation of ¬, that
+	max(1 - evalI(p), evalI(C'2)) = 1 which implies,			since I(p) = 1, that
+	max(0, evalI(C'2)) = 1 which implies,						by def of max, that
+	evalI(C'2) = 1 which implies,								by def of max and eval, that
+	max(evalI(C'1), eval(C'2)) = 1 which implies,				by def of evaluation of V, that
+	evalI(C'1 V C'2) = 1, which implies, 						by def of satisfaction, that
+	I |= C'1 V C'2. 
+	
+
+Case B) I(p) = 0. The proof is the same as in the case A, with the difference that now from min(evalI(p V C'1), eval(¬p V C'2)) = 1,
+we obtain eval(p V C'1) = 1 and hence since I(p) = 0, evalI(C'1) = 1, which implies eval(C'1 V C'2) = 1 amd hence I |= C'1 V C'2
+
+
+2)
+
+a) In a CNF F is unsatisfactible iff ¬F is a tautology, and by moving the negations of ¬F inward, we can obtain a DNF G with G ≡ ¬F
+
+
+
+3)
+
+
+
+
+
+

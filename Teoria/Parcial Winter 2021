@@ -1,0 +1,37 @@
+Parcial Exam Winter 2021 - Miquel Florensa
+
+|= ∧ ∨ ¬ ≡
+
+
+F -> G is a tautology iff F |= G
+
+	F -> G is a tautology iff							by def of ->
+	-F v G is a tautology iff 							by def of tautology
+	for all I, I |= -F v G iff							by def of |=
+			I, evalI(-F v G) = 1 iff					by def of evaluation of v
+			I, max(evalI (-F) ,evalI (G)) = 1 iff		by def of evaluation of -
+			I, max(1 - evalI (F), evalI(G)) = 1	iff		by def of max
+			I, 1 - evalI(F) = 1 or evalI(G) = 1 iff		by def of -
+			I, evalI(F) = 0 or evalI(G) = 1 iff			by def of |=
+			I, I |/= F or I |= G iff					by def of logical consequence
+			
+			
+Positive Unit Propagation						
+
+
+
+x0
+-x1
+-x2
+-a1
+-x2
+-x3
+-x4
+
+
+
+
+
+
+
+
